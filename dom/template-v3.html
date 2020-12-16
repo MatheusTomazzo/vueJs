@@ -1,0 +1,34 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    
+
+<p>
+ {{ txtCampo }}
+</p>
+
+<p>
+
+	{{ saudacao() }}
+
+</p>
+
+</div>
+
+<script>
+
+new Vue({
+	el:'#app',
+	data: {
+		txtCampo: 'Usando vueJs'
+	},
+	methods: {
+		saudacao: function(){
+			console.log(this)
+			return this.txtCampo //aqui ele faz um proxy para acessar o txtCampo
+		}
+			
+		}
+	
+})
+</script>

@@ -1,0 +1,41 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    
+
+<p>
+ {{ txtCampo }}
+</p>
+
+<p>
+
+	{{ saudacao() }}
+
+</p>
+
+<p>
+	<!-- usando uma diretiva no vuejs-->
+	<a v-bind:href="link">Google</a>
+
+</p>
+
+</div>
+
+<script>
+
+new Vue({
+	el:'#app',
+	data: {
+		txtCampo: 'Usando vueJs',
+		link: 'http://google.com.br'
+	},
+	methods: {
+		saudacao: function(){
+			console.log(this)
+			return this.txtCampo //aqui ele faz um proxy para acessar o txtCampo
+		}
+			
+		}
+	
+})
+</script>

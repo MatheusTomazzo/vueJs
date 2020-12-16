@@ -1,0 +1,35 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    
+<!-- evitando uma re-renderização do valor -->
+<p v-once>
+ {{ txtCampo }}
+</p>
+
+<p>
+
+	{{ saudacao() }}
+
+</p>
+
+</div>
+
+<script>
+
+new Vue({
+	el:'#app',
+	data: {
+		txtCampo: 'Usando vueJs',
+	},
+	methods: {
+		saudacao: function(){
+			
+			this.txtCampo = 'Bom dia!!!!'
+			return this.txtCampo
+		}
+			
+		}
+	
+})
+</script>

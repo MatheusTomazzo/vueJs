@@ -1,0 +1,46 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    
+<!-- imprimir conteudo html puro -->
+<p v-once>
+ {{ txtCampo }}
+</p>
+
+<p>
+
+	{{ saudacao() }}
+
+</p>
+
+
+<hr>
+e
+<!-- a tag v-html faz com que o conteudo de uma var do vue seja interpretado como html,
+pois naturalmente o vue tem uma proteção que evita que o usuario insira algum código malicioso em formularios-->
+<p v-html="linkHtml">
+
+	{{ linkHtml }}
+
+</p>
+</div>
+e
+<script>
+
+new Vue({
+	el:'#app',
+	data: {
+		txtCampo: 'Usando vueJs',
+		linkHtml: '<a href="http://google.com.br">Google</a>'
+	},
+	methods: {
+		saudacao: function(){
+			
+			this.txtCampo = 'Bom dia!!!!'
+			return this.txtCampo
+		}
+			
+		}
+	
+})
+</script>

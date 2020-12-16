@@ -1,0 +1,35 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    
+
+<p>
+ {{ txtCampo }}
+</p>
+
+<p>
+
+	{{ saudacao() }}
+
+</p>
+
+</div>
+<!-- o vue cria acessos diretos entre o js e o tamplate ou seja, não é necessário instanciar o new Vue -->
+
+<script>
+
+new Vue({
+	el:'#app',
+	data: {
+		txtCampo: 'Usando vueJs'
+	},
+	methods: {
+		saudacao: function(){
+
+			return 'Boa semana!'
+		}
+			
+		}
+	
+})
+</script>

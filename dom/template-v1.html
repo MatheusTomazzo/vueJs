@@ -1,9 +1,8 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <div id="app">
-<label for="txtTexto"> O que você digitar neste campo será exibido em baixo dele!</label>
+    
 
-<input type="text" v-on:input="alterarTitulo" id="txtTexto">
 <p>
  {{ txtCampo }}
 </p>
@@ -16,7 +15,7 @@
 new Vue({
 	el:'#app',
 	data: {
-		txtCampo: 'Digite algo no campo acima'
+		txtCampo: 'Usando vueJs'
 	},
 	methods: {
 		alterarTitulo(event){
